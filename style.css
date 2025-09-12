@@ -1,0 +1,326 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #142433, #1f2c3a);
+  color: #d1d9e6; /* cinza claro suave */
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* TOPO */
+.topo {
+  background-color: #1e2f44;
+  padding: 1rem 0;
+  border-bottom: 2px solid #58d68d;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 8px rgba(88, 214, 141, 0.3);
+}
+
+.topo .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 60px;
+  border-radius: 98px;
+  filter: drop-shadow(0 0 6px #58d68d);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #58d68d;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #82e0aa;
+}
+
+/* BANNER */
+.banner {
+  position: relative;
+  height: 60vh;
+  border-radius: 0 0 50px 50px;
+  overflow: hidden;
+  box-shadow: 0 0 30px #58d68d;
+  margin-bottom: 3rem;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.55);
+  transition: transform 12s ease;
+}
+
+.banner img:hover {
+  transform: scale(1.1);
+}
+
+.banner-texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #a8f0bc;
+  text-align: center;
+  max-width: 90%;
+  text-shadow: 0 0 10px #49a97a;
+  padding: 0 1rem;
+}
+
+.banner-texto h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.banner-texto p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* SOBRE */
+.sobre {
+  background: #1f3449;
+  padding: 3rem 0;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #58d68d77;
+  margin-bottom: 3rem;
+  color: #b8c9d9;
+  text-align: center;
+}
+
+.sobre h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: #82e0aa;
+  text-shadow: 0 0 8px #58d68d;
+}
+
+.sobre p {
+  font-size: 1.15rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* SERVIÇOS */
+.servicos {
+  margin-bottom: 4rem;
+}
+
+.servicos h2 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #82e0aa;
+  text-shadow: 0 0 8px #58d68d;
+}
+
+.grid-servicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 2rem;
+}
+
+.servico {
+  background: #1e2f44;
+  padding: 1.8rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #58d68daa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #d1d9e6;
+  text-align: center;
+}
+
+.servico:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px #49a97a;
+}
+
+.servico h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #a8f0bc;
+  text-shadow: 0 0 6px #58d68daa;
+}
+
+.servico p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* CONTATO */
+.contato {
+  background: #1f3449;
+  padding: 3rem 0;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #58d68d77;
+  color: #b8c9d9;
+  text-align: center;
+}
+
+.contato h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  color: #82e0aa;
+  text-shadow: 0 0 8px #58d68d;
+}
+
+.contato p {
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0.4rem auto;
+}
+
+.contato a.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #58d68d;
+  color: #1f3449;
+  padding: 0.75rem 2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 0 12px #58d68d;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contato a.btn:hover {
+  background-color: #49a97a;
+  box-shadow: 0 0 20px #49a97a;
+}
+
+/* RODAPÉ */
+.footer {
+  background-color: #1e2f44;
+  padding: 1.5rem 0;
+  text-align: center;
+  color: #7f8fa4;
+  font-size: 0.9rem;
+  border-top: 1px solid #58d68d;
+  box-shadow: 0 -2px 8px rgba(88, 214, 141, 0.3);
+}
+
+.footer .socials {
+  margin-top: 0.5rem;
+}
+
+.social-link {
+  margin: 0 10px;
+  color: #58d68d;
+  text-decoration: none;
+  vertical-align: middle;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  transition: color 0.3s ease;
+}
+
+.social-link svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.social-link:hover {
+  color: #82e0aa;
+  filter: drop-shadow(0 0 5px #58d68d);
+}
+
+/* LINKS PADRÃO */
+a {
+  color: #58d68d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #82e0aa;
+}
+
+/* RESPONSIVIDADE */
+
+/* Menu vertical e menor no celular */
+@media (max-width: 768px) {
+  .menu {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.8rem;
+  }
+
+  .menu a {
+    font-size: 1rem;
+    margin: 0 0.8rem;
+  }
+
+  .banner-texto h1 {
+    font-size: 2rem;
+  }
+
+  .banner-texto p {
+    font-size: 1rem;
+  }
+}
+
+/* Banner menor em celulares */
+@media (max-width: 480px) {
+  .banner {
+    height: 40vh;
+  }
+
+  .banner-texto h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner-texto p {
+    font-size: 0.9rem;
+  }
+
+  .servico {
+    padding: 1.2rem 1rem;
+  }
+
+  .sobre p, .contato p {
+    font-size: 1rem;
+  }
+}
