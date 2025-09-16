@@ -11,20 +11,24 @@
   <!-- TOPO -->
   <header class="topo">
     <div class="container">
-      <img src="imagem/images.jpg" alt="Logo Vtec Automação" class="logo">
+      <a href="#home">
+        <img src="imagens/logo.png" alt="Logo Vtec Automação Comercial e Informática" class="logo">
+      </a>
+            <button class="menu-toggle" aria-label="Abrir menu">☰</button>
       <nav class="menu">
         <a href="#sobre">Sobre Nós</a>
         <a href="#servicos">Serviços</a>
         <a href="#galeria">Galeria</a>
         <a href="#video">Vídeo</a>
+        <a href="#localizacao">Localização</a>
         <a href="#contato">Contato</a>
       </nav>
     </div>
   </header>
 
   <!-- BANNER -->
-  <section class="banner">
-    <img src="imagens/banner.jpg" alt="Banner Vtec Automação" />
+  <section class="banner" id="home">
+    <img src="imagens/banner1.png" alt="Banner institucional Vtec Automação" />
     <div class="banner-texto">
       <h1>Soluções em Automação Comercial & Informática</h1>
       <p>Atendimento personalizado, suporte técnico, software e hardware para sua empresa.</p>
@@ -36,7 +40,7 @@
     <div class="container">
       <h2>Quem Somos</h2>
       <p>
-        A Vtec Automação Comercial atua na área de informática e automação industrial, oferecendo serviços especializados como instalação e manutenção de máquinas e equipamentos industriais, automação de processos, suporte técnico, além de soluções integradas para negócios. Nosso compromisso é com a qualidade, agilidade e atendimento dedicado para o sucesso dos nossos clientes.
+        A <strong>Vtec Automação Comercial e Informática</strong> atua nas áreas de tecnologia e automação industrial, oferecendo serviços especializados como instalação e manutenção de máquinas, automação de processos, suporte técnico e soluções integradas para empresas. Nosso compromisso é entregar qualidade, agilidade e atendimento dedicado para o sucesso dos nossos clientes.
       </p>
     </div>
   </section>
@@ -48,19 +52,19 @@
       <div class="grid-servicos">
         <div class="servico">
           <h3>Instalação de Máquinas Industriais</h3>
-          <p>Instalação e configuração de equipamentos industriais com alta precisão e segurança.</p>
+          <p>Configuração de equipamentos industriais com segurança e alta precisão.</p>
         </div>
         <div class="servico">
           <h3>Manutenção Preventiva e Corretiva</h3>
-          <p>Serviços de manutenção para garantir o funcionamento contínuo e evitar paradas inesperadas.</p>
+          <p>Serviços para garantir funcionamento contínuo, evitando falhas e paradas.</p>
         </div>
         <div class="servico">
           <h3>Automação de Processos</h3>
-          <p>Desenvolvimento e implantação de sistemas para automação industrial visando eficiência e redução de custos.</p>
+          <p>Implantação de sistemas automatizados para eficiência e redução de custos.</p>
         </div>
         <div class="servico">
           <h3>Consultoria Técnica</h3>
-          <p>Orientação especializada para otimizar seus processos industriais e tecnologias utilizadas.</p>
+          <p>Orientação personalizada para otimizar processos industriais e tecnologias.</p>
         </div>
       </div>
     </div>
@@ -69,14 +73,28 @@
   <!-- GALERIA -->
   <section id="galeria" class="galeria">
     <div class="container">
-      <h2>Galeria</h2>
-      <p>Aqui você pode inserir fotos dos projetos, instalações e eventos da empresa.</p>
-      <div class="grid-galeria">
-        <!-- Exemplo de imagens -->
-        <img src="imagens/galeria1.jpg" alt="Projeto 1" />
-        <img src="imagens/galeria2.jpg" alt="Projeto 2" />
-        <img src="imagens/galeria3.jpg" alt="Projeto 3" />
-        <!-- Adicione mais imagens conforme necessário -->
+      <h2>Confira alguns registros de projetos, instalações e eventos da nossa empresa.</h2>
+      <div class="grid-galeria-wrapper">
+        <div class="grid-galeria">
+          <img 
+            src="https://lh3.googleusercontent.com/p/AF1QipPZXXl3_eU5oZg-ul33iitpltR7RUQPmBeWOW6B=s680-w680-h510-rw" alt="Projeto em execução"
+            class="carrosel-foto initial"
+          />
+          <img 
+            src="https://lh3.googleusercontent.com/p/AF1QipPT5XyKukOUYsp7x3Fqs1ZcdVgU87ImV5LbwQLD=s680-w680-h510-rw" alt="Equipamento instalado" 
+            class="carrosel-foto"
+          />
+          <img 
+            src="https://lh3.googleusercontent.com/p/AF1QipM9MiGKOXkOWtvqr5G2ELgry4sh4FtOhqf8kjTT=s680-w680-h510-rw" alt="Equipe em atividade" 
+            class="carrosel-foto"
+          />
+          <img
+            src="https://lh3.googleusercontent.com/p/AF1QipOOsqUd6zSd2ZEzqfecoojga8VdnZMP-9eb_z-l=s680-w680-h510-rw" alt="Equipe em atividade"
+            class="carrosel-foto"
+          />
+          <div class="carrosel-button--next"></div>
+          <div class="carrosel-button--prev"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -85,10 +103,32 @@
   <section id="video" class="video">
     <div class="container">
       <h2>Vídeo Institucional</h2>
-      <p>Confira um vídeo sobre nossos serviços e a história da Vtec Automação.</p>
+      <p>Conheça melhor nossa história e serviços.</p>
       <div class="video-wrapper">
-        <!-- Substitua o link do vídeo pelo seu vídeo oficial -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/SEU_VIDEO_AQUI" title="Vídeo Institucional Vtec Automação" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <video controls width="100%">
+          <source src="video/✨ Na VTEC, cada atendimento é guiado por um propósito- valorizar o tempo e o sonho de cada clien.mp4" type="video/mp4" />
+          Seu navegador não suporta reprodução de vídeo.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO -->
+  <section id="localizacao" class="localizacao">
+    <div class="container">
+      <h2>Onde Estamos</h2>
+      <p>Visite-nos em nossa sede para atendimento presencial:</p>
+      <p><strong>📍 Endereço:</strong> Rua Vicente Favela, 123 - Centro, Betim - MG</p>
+      <div class="mapa">
+        <iframe 
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC7Tpz2OqneToOuuKmiuLz8FVp-Vh1O2_I&q=VTec+Informática+e+Automação+Comercia"
+          width="100%" 
+          height="350" 
+          style="border:0;" 
+          allowfullscreen 
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
   </section>
@@ -99,7 +139,7 @@
       <h2>Contato</h2>
       <p><strong>Instagram:</strong> <a href="https://instagram.com/vtec_automacao" target="_blank">@vtec_automacao</a></p>
       <p><strong>📞 Telefones:</strong> (31) 98765-4321 / (31) 3536-2048</p>
-      <p><strong>📧 E-mail:</strong> contato@vtecautomacao.com.br</p>
+      <p><strong>📧 E-mail:</strong> <a href="mailto:contato@vtecautomacao.com.br">contato@vtecautomacao.com.br</a></p>
       <a class="btn" href="https://wa.me/5531987654321" target="_blank">Fale Conosco no WhatsApp</a>
     </div>
   </section>
@@ -107,8 +147,9 @@
   <!-- RODAPÉ -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Vtec Automação Comercial. Todos os direitos reservados.</p>
+      <p>&copy; 2025 Vtec Automação Comercial e Informática. Todos os direitos reservados.</p>
       <div class="socials">
+        <!-- Instagram -->
         <a href="https://instagram.com/vtec_automacao" target="_blank" aria-label="Instagram" class="social-link">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram" viewBox="0 0 24 24">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -116,12 +157,14 @@
             <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
           </svg>
         </a>
+        <!-- Email -->
         <a href="mailto:contato@vtecautomacao.com.br" target="_blank" aria-label="Email" class="social-link">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail" viewBox="0 0 24 24">
             <path d="M4 4h16v16H4z"></path>
             <polyline points="22,6 12,13 2,6"></polyline>
           </svg>
         </a>
+        <!-- WhatsApp -->
         <a href="https://wa.me/5531987654321" target="_blank" aria-label="WhatsApp" class="social-link">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone" viewBox="0 0 24 24">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.66A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.18 12.18 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.18 12.18 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -130,6 +173,9 @@
       </div>
     </div>
   </footer>
+ <!-- SCRIPT MENU -->
+  <script src="index.js">
 
+  </script>
 </body>
 </html>

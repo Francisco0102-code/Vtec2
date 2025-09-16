@@ -186,6 +186,79 @@ body {
   line-height: 1.5;
 }
 
+/* GALERIA */
+.grid-galeria-wrapper {
+  overflow: hidden;
+}
+
+.grid-galeria {
+  transform-style: preserve-3d;
+}
+
+.carrosel-foto {
+  opacity: 0;
+  position: absolute;
+  width: 50%;
+  margin: auto;
+  padding: 1rem 4rem;
+  top: 0;
+  transition: transform .5s, opacity .5s, z-index .5s;
+}
+
+.carrosel-foto.initial,
+.carrosel-foto.active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+
+.carrosel-foto.prev,
+.carrosel-foto.next {
+  z-index: 800;
+}
+.carrosel-foto.prev {
+  transform: translateX(-100%);
+}
+.carrosel-foto.next {
+  transform: translateX(100%);
+}
+
+.carrosel-button--prev,
+.carrosel-button--next {
+  position: absolute;
+  top:50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #FFF;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  cursor: pointer; 
+  z-index: 1001; /* Sit on top of everything */
+  border: 1px solid black;
+}
+.carrosel-button--prev {
+  left:0;
+}
+.carrosel-button--next {
+  right:0;
+}
+.carrosel-button--prev::after,
+.carrosel-button--next::after {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 54%;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+.carrosel-button--next::after {
+  left: 47%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 /* CONTATO */
 .contato {
   background: #1f3449;
@@ -305,7 +378,7 @@ a:hover {
 /* Banner menor em celulares */
 @media (max-width: 480px) {
   .banner {
-    height: 40vh;
+    height: 50vh;
   }
 
   .banner-texto h1 {
@@ -322,5 +395,58 @@ a:hover {
 
   .sobre p, .contato p {
     font-size: 1rem;
+  }
+}
+
+/* BOTÃO HAMBURGUER - escondido no PC */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #58d68d;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* COMPORTAMENTO MOBILE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* aparece no celular */
+  }
+
+  .menu {
+    display: none; /* escondido por padrão */
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e2f44;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    width: 200px;
+  }
+
+  .menu.ativo {
+    display: flex; /* abre quando ativado */
+  }
+
+  .menu a {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+}
+
+/* NO PC: menu sempre visível */
+@media (min-width: 769px) {
+  .menu {
+    display: flex !important;
+    gap: 20px;
   }
 }
