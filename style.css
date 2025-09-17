@@ -189,17 +189,21 @@ body {
 /* GALERIA */
 .grid-galeria-wrapper {
   overflow: hidden;
+  background-color: #49a97b00;
 }
 
 .grid-galeria {
+  display: flex;
   transform-style: preserve-3d;
+  align-items: center;
 }
 
 .carrosel-foto {
   opacity: 0;
   position: absolute;
-  width: 50%;
   margin: auto;
+  object-fit: cover;
+  height: 100%;
   padding: 1rem 4rem;
   top: 0;
   transition: transform .5s, opacity .5s, z-index .5s;
@@ -450,3 +454,58 @@ a:hover {
     gap: 20px;
   }
 }
+
+/* Compactação para desktop */
+@media (min-width: 769px) {
+  .container {
+    max-width: 900px; /* reduz largura máxima */
+  }
+  .banner {
+    height: 45vh; /* banner menos alto */
+    margin-bottom: 2rem;
+  }
+  .servico {
+    padding: 1.2rem 1rem; /* menos espaçamento interno */
+  }
+  .servicos h2,
+  .sobre h2,
+  .contato h2 {
+    font-size: 2rem; /* títulos menores */
+  }
+  .banner-texto h1 {
+    font-size: 2.2rem;
+  }
+  .banner-texto p {
+    font-size: 1rem;
+  }
+}
+
+.carrosel-foto {
+  opacity: 0;
+  position: absolute;
+  object-fit: cover;
+  padding: 0;    /* sem padding para não deslocar */
+  top: 0;
+  transition: transform .5s, opacity .5s, z-index .5s;
+}
+.carrosel-foto img {
+  width: 100%;   /* imagem ocupa toda a largura do container */
+  height: auto;  /* altura automática para manter proporção */
+  border-radius: 15px;
+  box-shadow: 0 0 15px #58d68daa;
+}
+
+@media (max-width: 768px) {
+  .carrosel-foto {
+    width: 90%;  /* largura reduzida no celular */
+    padding: 0;  /* sem padding para não deslocar */
+  }
+}
+@media (max-width: 480px) {
+  .carrosel-foto {
+    width: 100%; /* largura total no celular pequeno */
+    padding: 0;  /* sem padding para não deslocar */
+  }
+}
+
+/* FIM */
