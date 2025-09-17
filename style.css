@@ -204,9 +204,15 @@ body {
   margin: auto;
   object-fit: cover;
   height: 100%;
-  padding: 1rem 4rem;
+  padding: 0;    /* sem padding para não deslocar */
   top: 0;
   transition: transform .5s, opacity .5s, z-index .5s;
+}
+.carrosel-foto img {
+  width: 100%;   /* imagem ocupa toda a largura do container */
+  height: auto;  /* altura automática para manter proporção */
+  border-radius: 15px;
+  box-shadow: 0 0 15px #58d68daa;
 }
 
 .carrosel-foto.initial,
@@ -304,6 +310,7 @@ body {
   background-color: #49a97a;
   box-shadow: 0 0 20px #49a97a;
 }
+
 
 /* RODAPÉ */
 .footer {
@@ -480,31 +487,20 @@ a:hover {
   }
 }
 
-.carrosel-foto {
-  opacity: 0;
-  position: absolute;
-  object-fit: cover;
-  padding: 0;    /* sem padding para não deslocar */
-  top: 0;
-  transition: transform .5s, opacity .5s, z-index .5s;
-}
-.carrosel-foto img {
-  width: 100%;   /* imagem ocupa toda a largura do container */
-  height: auto;  /* altura automática para manter proporção */
+.video video {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
   border-radius: 15px;
   box-shadow: 0 0 15px #58d68daa;
+  display: block;
+  margin: 0 auto;
+  background: #22344a;
 }
 
 @media (max-width: 768px) {
-  .carrosel-foto {
-    width: 90%;  /* largura reduzida no celular */
-    padding: 0;  /* sem padding para não deslocar */
-  }
-}
-@media (max-width: 480px) {
-  .carrosel-foto {
-    width: 100%; /* largura total no celular pequeno */
-    padding: 0;  /* sem padding para não deslocar */
+  .video video {
+    max-width: 95vw;
   }
 }
 
