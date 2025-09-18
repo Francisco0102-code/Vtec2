@@ -192,8 +192,8 @@ section {
 /* IMAGEM DO SERVIÇO */
 .servico img {
   width: 100%;
-  max-width: 220px;
-  height: 140px;
+  max-width: 280px;
+  height: 170px;
   object-fit: cover;
   border-radius: 14px;
   box-shadow: 0 2px 12px #58d68d33;
@@ -207,17 +207,13 @@ section {
 
 /* TÍTULO E TEXTO */
 .servico h3 {
-  color: #58d68d;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.5px;
+  font-size: 1.05rem; /* título menor */
+  margin-bottom: 0.4rem;
 }
 
 .servico p {
-  font-size: 1rem;
-  color: #2d3a3a;
-  line-height: 1.6;
-  margin-bottom: 0;
+  font-size: 0.95rem; /* texto menor */
+  line-height: 1.5;
 }
 
 .services-container {
@@ -613,18 +609,17 @@ background: #fdfeff;
 }
 
 .certificado-container p {
-  font-size: 1.15rem;
-  color: #2d3a3a;
-  font-weight: 500;
-  margin: 0;
+  font-size: 1rem; /* texto menor */
+  line-height: 1.5;
 }
 
 .certificado-container img {
-  max-width: 180px;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px #58d68d44;
-  border: 3px solid #58d68d;
-  background: #fff;
+  max-width: 400px; /* imagem maior */
+  width: 100%;
+  min-width: 220px;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  display: block;
 }
 
 /* Responsivo */
