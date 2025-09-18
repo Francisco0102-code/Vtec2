@@ -608,12 +608,11 @@ background: #fdfeff;
   border-radius: 18px;
   box-shadow: 0 4px 24px #58d68d33;
   padding: 2rem 1.5rem;
-  margin: 2.5rem 0;
+  margin: 0.5rem 0 2.5rem 0;
   justify-content: center;
 }
 
 .certificado-container p {
-
   font-size: 1.15rem;
   color: #2d3a3a;
   font-weight: 500;
