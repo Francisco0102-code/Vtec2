@@ -132,7 +132,7 @@ section {
   color: #333;
   text-align: center;
   padding: 1rem 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .sobre h2,
@@ -152,9 +152,9 @@ section {
 }
 
 /* ===== SERVIÇOS ===== */
-.servicos {
+/* .servicos {
   margin-bottom: 4rem;
-}
+} */
 
 .servicos h2 {
   font-size: 2.4rem;
@@ -218,8 +218,7 @@ section {
 
 .services-container {
   text-align: center;
-  padding: 3rem 1rem;
-  margin-bottom: 4rem;
+  padding: 0 1rem;
 }
 
 /* .services-container:nth-child .servico-container {
@@ -280,8 +279,7 @@ section {
 /* ===== GALERIA / CARROSSEL ===== */
 .grid-galeria-wrapper {
   overflow: hidden;
-  background-color: transparent;
-  margin-bottom: 4rem;
+  background-color: #000000;
 }
 
 .grid-galeria {
@@ -469,7 +467,7 @@ a:hover {
 /* Banner menor em celulares */
 @media (max-width: 480px) {
   .banner {
-    height: 50vh;
+    height: 60vh;
   }
 
   .banner-texto h1 {
@@ -610,6 +608,7 @@ background: #fdfeff;
   box-shadow: 0 4px 24px #58d68d33;
   padding: 2rem 1.5rem;
   margin: 0.5rem 0 2.5rem 0;
+  width: 100%;
   justify-content: center;
 }
 
@@ -621,7 +620,6 @@ background: #fdfeff;
 .certificado-container img {
   max-width: 400px; /* imagem maior */
   width: 100%;
-  min-width: 220px;
   margin-top: 1rem;
   margin-bottom: 0;
   display: block;
