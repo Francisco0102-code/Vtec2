@@ -16,11 +16,10 @@ body {
 
 /* Container padrão */
 .container {
-  width: 96%;
+  width: 90%;
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1rem;
-  box-sizing: border-box;
 }
 
 /* ===== TOPO ===== */
@@ -74,12 +73,10 @@ body {
 /* ===== BANNER ===== */
 .banner {
   position: relative;
-  height: 70vh;
-  min-height: 320px;
-  max-height: 600px;
+  height: 90vh; /* aumente conforme desejar */
   border-radius: 0 0 30px 30px;
   overflow: hidden;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .banner img {
@@ -101,13 +98,12 @@ body {
   transform: translate(-50%, -50%);
   color: #f8fdf9;
   text-align: center;
-  max-width: 90vw;
-  width: 100%;
-  padding: 1rem 4vw;
-  font-size: 1.1rem;
+  max-width: 700px;         /* Limita a largura máxima do texto */
+  width: 90vw;              /* Garante que não ultrapasse a tela */
   text-shadow: 0 0 10px #49a97a;
-  box-sizing: border-box;
-  word-break: break-word;
+  padding: 1rem 2vw;        /* Espaço interno proporcional */
+  box-sizing: border-box;   /* Inclui padding na largura */
+  word-break: break-word;   /* Quebra palavras longas */
   overflow-wrap: break-word;
 }
 
@@ -123,30 +119,9 @@ body {
   font-weight: 500;
 }
 
-@media (max-width: 900px) {
-  .banner {
-    height: 45vh;
-    min-height: 180px;
-    margin-bottom: 2rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .banner {
-    height: 32vh;
-    min-height: 120px;
-    margin-bottom: 1rem;
-  }
-
-  .banner-texto {
-    font-size: 0.95rem;
-    padding: 0.7rem 2vw;
-  }
-}
-
 /* ===== SEÇÕES ===== */
 section {
-  padding: 3rem 0;
+  padding: 4rem 0; /* espaçamento padrão */
 }
 
 .sobre,
@@ -156,8 +131,8 @@ section {
   box-shadow: 0 0 15px rgba(88, 214, 141, 0.15);
   color: #333;
   text-align: center;
-  padding: 1rem 1rem;
-  margin-bottom: 1rem;
+  padding: 3rem 1rem;
+  margin-bottom: 4rem;
 }
 
 .sobre h2,
@@ -177,9 +152,9 @@ section {
 }
 
 /* ===== SERVIÇOS ===== */
-/* .servicos {
+.servicos {
   margin-bottom: 4rem;
-} */
+}
 
 .servicos h2 {
   font-size: 2.4rem;
@@ -193,7 +168,7 @@ section {
 .grid-servicos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -211,16 +186,17 @@ section {
 
 .servico:hover {
   box-shadow: 0 8px 32px #58d68d44;
-  transform: translateY(-8px) scale(1.04);
+  transform: translateY(-6px) scale(1.02);
 }
 
 /* IMAGEM DO SERVIÇO */
 .servico img {
   width: 100%;
-  max-width: 320px;
-  height: 180px;
+  max-width: 220px;
+  height: 140px;
   object-fit: cover;
   border-radius: 14px;
+  box-shadow: 0 2px 12px #58d68d33;
   margin-bottom: 1rem;
   transition: transform 0.3s;
 }
@@ -231,18 +207,23 @@ section {
 
 /* TÍTULO E TEXTO */
 .servico h3 {
-  font-size: 1.05rem; /* título menor */
-  margin-bottom: 0.4rem;
+  color: #58d68d;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
 }
 
 .servico p {
-  font-size: 0.95rem; /* texto menor */
-  line-height: 1.5;
+  font-size: 1rem;
+  color: #2d3a3a;
+  line-height: 1.6;
+  margin-bottom: 0;
 }
 
 .services-container {
   text-align: center;
-  padding: 0 1rem;
+  padding: 3rem 1rem;
+  margin-bottom: 4rem;
 }
 
 /* .services-container:nth-child .servico-container {
@@ -302,32 +283,9 @@ section {
 
 /* ===== GALERIA / CARROSSEL ===== */
 .grid-galeria-wrapper {
-  position: relative;
   overflow: hidden;
-  background-color: #00000000;
-}
-
-/* Adiciona um desfoque nas bordas pretas do carrossel */
-.grid-galeria-wrapper::before,
-.grid-galeria-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 60px;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-  background: #f5f5f500;
-  filter: blur(18px);
-  opacity: 0.7;
-}
-
-.grid-galeria-wrapper::before {
-  left: 0;
-}
-
-.grid-galeria-wrapper::after {
-  right: 0;
+  background-color: transparent;
+  margin-bottom: 4rem;
 }
 
 .grid-galeria {
@@ -427,10 +385,10 @@ section {
 /* ===== RODAPÉ ===== */
 .footer {
   background-color: #ffffff;
-  padding: 2rem 0 1rem 0;
+  padding: 1.5rem 0;
   text-align: center;
   color: #7f8fa4;
-  font-size: 1rem;
+  font-size: 0.9rem;
   border-top: 1px solid #58d68d;
   box-shadow: 0 -2px 8px rgba(88, 214, 141, 0.1);
 }
@@ -515,7 +473,7 @@ a:hover {
 /* Banner menor em celulares */
 @media (max-width: 480px) {
   .banner {
-    height: 60vh;
+    height: 50vh;
   }
 
   .banner-texto h1 {
@@ -554,24 +512,20 @@ a:hover {
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-    position: absolute;
-    top: 18px;
-    right: 18px;
-    z-index: 2000;
   }
 
   .menu {
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px #58d68d22;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-    gap: 0.5rem;
     display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #686666;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(107, 107, 107, 0.1);
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    width: 200px;
   }
 
   .menu.ativo {
@@ -637,16 +591,11 @@ background: #fdfeff;
     flex-direction: column;
     gap: 1.2rem;
     align-items: stretch;
-    padding: 0;
-    margin-bottom: 0;
   }
   .sobre-conteudo,
   .sobre-img {
     text-align: center;
     margin: 0 auto;
-  }
-  section {
-    padding: 1rem 0;
   }
 }
 
@@ -659,22 +608,24 @@ background: #fdfeff;
   border-radius: 18px;
   box-shadow: 0 4px 24px #58d68d33;
   padding: 2rem 1.5rem;
-  margin: 0.5rem 0 2.5rem 0;
-  width: 100%;
+  margin: 2.5rem 0;
   justify-content: center;
 }
 
 .certificado-container p {
-  font-size: 1rem; /* texto menor */
-  line-height: 1.5;
+
+  font-size: 1.15rem;
+  color: #2d3a3a;
+  font-weight: 500;
+  margin: 0;
 }
 
 .certificado-container img {
-  max-width: 400px; /* imagem maior */
-  width: 100%;
-  margin-top: 1rem;
-  margin-bottom: 0;
-  display: block;
+  max-width: 180px;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px #58d68d44;
+  border: 3px solid #58d68d;
+  background: #fff;
 }
 
 /* Responsivo */
