@@ -131,8 +131,8 @@ section {
   box-shadow: 0 0 15px rgba(88, 214, 141, 0.15);
   color: #333;
   text-align: center;
-  padding: 3rem 1rem;
-  margin-bottom: 4rem;
+  padding: 1rem 1rem;
+  margin-bottom: 2rem;
 }
 
 .sobre h2,
@@ -587,11 +587,16 @@ background: #fdfeff;
     flex-direction: column;
     gap: 1.2rem;
     align-items: stretch;
+    padding: 0;
+    margin-bottom: 0;
   }
   .sobre-conteudo,
   .sobre-img {
     text-align: center;
     margin: 0 auto;
+  }
+  section {
+    padding: 1rem 0;
   }
 }
 
